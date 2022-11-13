@@ -1,17 +1,74 @@
-import React from 'react';
+import React, { useState } from 'react';
 
-export default function About() {
+function Contact() {
+
+  const [name, setName] = useState('');
+  const [email, setEmail] = useState('');
+  const [message, setMessage] = useState('');
+
+  const handleInputChange = (e) => {
+    switch(e.target.name) { 
+      case name:
+        setName(e.target.value)
+        break; 
+      case email:
+        setEmail(e.target.value)
+        break;
+      case message:
+        setMessage(e.target.value)
+        break; 
+      default: 
+        return;
+    }
+    console.log(this.name)
+  };
+
+  const alertRequired = (e) => {
+    e.preventDefault(); 
+    if (name){ 
+      alert('all fields are required'); 
+    } return; 
+  }; 
+
+  const handleFormSubmit = (e) => {
+    e.preventDefault();
+
+  };
+
   return (
     <div>
-      <h1>Contact Me</h1>
-      <p>
-        Nunc pharetra finibus est at efficitur. Praesent sed congue diam.
-        Integer gravida dui mauris, ut interdum nunc egestas sed. Aenean sed
-        mollis diam. Nunc aliquet risus ac finibus porta. Nam quis arcu non
-        lectus tincidunt fermentum. Suspendisse aliquet orci porta quam semper
-        imperdiet. Praesent euismod mi justo, faucibus scelerisque risus cursus
-        in. Sed rhoncus mollis diam, sit amet facilisis lectus blandit at.
-      </p>
+      <form 
+      className="form" 
+      onBlur={alertRequired}
+      >
+        <input
+          name="name"
+          type="text"
+          placeholder="Name"
+          onChange={handleInputChange}
+          required
+        />
+        <input
+          name="email"
+          onChange={handleInputChange}
+          type="email"
+          placeholder="Email Address"
+          required
+        />
+        <textarea
+          className="form-control"
+          name="message"
+          onChange={handleInputChange}
+          type="text"
+          placeholder="What's on your mind?"
+          required
+        ></textarea>
+        <button className="btn btn-primary" type="button" onClick={handleFormSubmit}>
+          Submit
+        </button>
+      </form>
     </div>
   );
 }
+
+export default Contact;
