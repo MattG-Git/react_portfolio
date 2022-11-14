@@ -32,7 +32,9 @@ I wrote the code to meet the following acceptance criteria:
 * WHEN I view the footer
 * THEN I am presented with text or icon links to the developer’s GitHub and LinkedIn profiles, and their profile on a third platform (Stack Overflow, Twitter)
 
+# Deployed Site
+Please see [live page here](https://mattg-git.github.io/react_portfolio/)
+
 # Screenshot
 
 ![Portfolio](./public/images/React_portfolio_screenshot.png)
-
