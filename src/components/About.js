@@ -4,7 +4,7 @@ export default function About() {
   return (
     <div>
       <h1>About Me</h1>
-      <div className="containter mt-3 pt-5 mb-5">
+      <div className="containter about mt-3 pt-5 mb-5">
         <div className="row align-items-center">
           <div className="col-md-5 order-sm-first order-first mb-3 text-center">
             <img src="./images/smaller.jpg" alt="Matt Goldhammer" className="img-thumbnail m-auto" style={{maxHeight:"350px"}}/>

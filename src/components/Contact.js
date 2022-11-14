@@ -37,6 +37,7 @@ function Contact() {
 
   return (
     <div className="container mt-5 mb-5">
+      <h1>Contact Me</h1>
       <form 
       className="form " 
       onBlur={alertRequired}
@@ -71,7 +72,7 @@ function Contact() {
             required> 
           </textarea>
         </div>
-        <button className="btn btn-primary mt-4" type="button" onClick={handleFormSubmit}>
+        <button className="btn btn-success mt-4" type="button" onClick={handleFormSubmit}>
           Submit
         </button>
       </form>

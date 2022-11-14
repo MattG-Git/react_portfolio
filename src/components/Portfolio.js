@@ -13,14 +13,15 @@ export default function Portfolio() {
                   <p className="mb-0" style={{fontSize:"2.2rem", fontWeight:"100"}}>{site.name}</p>
                   <p style={{fontWeight:"700", color:"gray", fontStyle:"italic"}}>{site.subtitle}</p>
                   <p>{site.description}</p>
-                  <button className="mb-5" color="warning" size="lg" onClick={()=>window.open(site.link)}>View Project</button>
+                  <button className="m-2 btn btn-success" onClick={()=>window.open(site.link)}>View Project</button>
+                  <button className="m-2 btn btn-success" onClick={()=>window.open(site.github)}>View Github</button>
               </div>
           </div>
       );
   })
   return(
       <div className="container">
-          <h2 className="mb-5">My Projects</h2>
+          <h1 className="mb-5">My Projects</h1>
           {projectsList}
       </div>
       

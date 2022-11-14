@@ -36,3 +36,25 @@
     transform: rotate(360deg);
   }
 }
+
+nav {
+  background-color: #33895d;
+  
+}
+nav a {
+  color: #ebfed8 !important
+}
+
+p {
+  color: #78c377;
+}
+
+h1 {
+  color: darkgray;
+}
+
+.name {
+  color: #ebfed8 !important;
+  font-weight: bold;
+}
+
