@@ -5,7 +5,7 @@ function Contact() {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [message, setMessage] = useState('');
-
+// I should try changing the onChange events to onBlur events for each input field and adding a second layer of boolean logic to check if the value === an empty string. Remove from the general form element.
   const handleInputChange = (e) => {
     switch(e.target.name) { 
       case name:
@@ -36,34 +36,42 @@ function Contact() {
   };
 
   return (
-    <div>
+    <div className="container mt-5 mb-5">
       <form 
-      className="form" 
+      className="form " 
       onBlur={alertRequired}
       >
-        <input
-          name="name"
-          type="text"
-          placeholder="Name"
-          onChange={handleInputChange}
-          required
-        />
-        <input
-          name="email"
-          onChange={handleInputChange}
-          type="email"
-          placeholder="Email Address"
-          required
-        />
-        <textarea
-          className="form-control"
-          name="message"
-          onChange={handleInputChange}
-          type="text"
-          placeholder="What's on your mind?"
-          required
-        ></textarea>
-        <button className="btn btn-primary" type="button" onClick={handleFormSubmit}>
+        <div className="row mb-3">
+          <label className="form-label">Name:</label>
+          <input 
+            name="name"
+            type="text"
+            placeholder="John Smith"
+            onChange={handleInputChange}
+            required
+          />
+        </div>
+        <div className="row mb-3">
+          <label className="form-label">Email Address: </label>
+          <input 
+            name="email"
+            onChange={handleInputChange}
+            type="email"
+            placeholder="Sample@gmail.com"
+            required
+          />
+        </div>
+        <div className="form-control form-control-lg row">
+          <label className="form-label">Message: </label>
+          <textarea
+            name="message"
+            onChange={handleInputChange}
+            type="text"
+            placeholder="What's on your mind?"
+            required> 
+          </textarea>
+        </div>
+        <button className="btn btn-primary mt-4" type="button" onClick={handleFormSubmit}>
           Submit
         </button>
       </form>

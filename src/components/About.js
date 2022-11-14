@@ -3,15 +3,19 @@ import React from 'react';
 export default function About() {
   return (
     <div>
-      <h1>About Page</h1>
-      <p>
-        Nunc pharetra finibus est at efficitur. Praesent sed congue diam.
-        Integer gravida dui mauris, ut interdum nunc egestas sed. Aenean sed
-        mollis diam. Nunc aliquet risus ac finibus porta. Nam quis arcu non
-        lectus tincidunt fermentum. Suspendisse aliquet orci porta quam semper
-        imperdiet. Praesent euismod mi justo, faucibus scelerisque risus cursus
-        in. Sed rhoncus mollis diam, sit amet facilisis lectus blandit at.
-      </p>
+      <h1>About Me</h1>
+      <div className="containter mt-3 pt-5 mb-5">
+        <div className="row align-items-center">
+          <div className="col-md-5 order-sm-first order-first mb-3 text-center">
+            <img src="./images/smaller.jpg" alt="Matt Goldhammer" className="img-thumbnail m-auto" style={{maxHeight:"350px"}}/>
+          </div>
+          <div className="col-md-7 order-lg-first order-xl-first order-md-first text-center " style={{width:"750px"}}>
+           <p>
+               Welcome to my porfolio! My name is Matt, I'm currently a student enrolled in University of Arizona's web development bootcamp. Please take a look around and be sure to check out the projects I've been working. Feel free to drop me a message or reach out on any of my contact links, I'd love to connect.
+           </p>
+          </div>
+        </div>
+      </div>
     </div>
   );
 }
